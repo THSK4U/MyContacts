@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family: "Rubik", sans-serif;
 }
 body::-webkit-scrollbar{
     width: 0.05rem;
@@ -65,18 +67,19 @@ margin-left: 9rem;
 }
 
 main{
-  margin-top: 20px ;
+  margin-top: 100px ;
 }
 
 .input-container{
 position:absolute;
+top: 20px;
 left: -400px;
 background: rgb(155, 146, 248);
 width: 0px;
 height: 30px;
 border-radius: 0 15px 15px 0;
 transition:all 0.4s ease; 
-z-index: -1;
+z-index: 6;
 }
 .input{
     box-sizing: border-box;
@@ -93,7 +96,7 @@ z-index: -1;
 
 .input-container.active{
     left: 62px;
-    width: 367px;
+    width: 347px;
     border-radius: 0 25px 25px 0;
 
     }
@@ -103,9 +106,6 @@ z-index: -1;
    
       
 
-
-
-
         .cards{
             width: 100%;
             display: flex;
@@ -113,14 +113,29 @@ z-index: -1;
             justify-content: space-evenly;
         }
 
-      .flip-card {
+      .flipcard {
         width: 190px;
         height: 254px;
       }
       
-      .title {
-        font-size: 1.5em;
+      .titlefront {
+        font-size: 1.3em;
         font-weight: 900;
+        margin-bottom: 20px;
+      }
+      .titleback{
+        position: absolute;
+        top: 30%;
+        left: 25%;
+      }
+      .image{
+background-color: red;
+        width: 20px;
+height: 20px;
+      }
+
+      .email{
+        font-size: 1rem;
       }
       
       .flip-card-inner {
@@ -131,7 +146,7 @@ z-index: -1;
         transform-style: preserve-3d;
       }
       
-      .flip-card:hover .flip-card-inner {
+      .flipcard:hover .flip-card-inner {
         transform: rotateY(180deg);
       }
       
@@ -145,13 +160,15 @@ z-index: -1;
         height: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        border: 1px solid rgb(255, 255, 255);
         border-radius: 1rem;
       }
       
       .flip-card-front {
-        background: rgba(155, 146, 248, 0.3);
+        background: rgba(0, 0, 0, 0.3);
+        background-repeat: no-repeat;
+        background-size: cover;
         color: rgb(255, 255, 255);
+        
       }
       
       .flip-card-back {
