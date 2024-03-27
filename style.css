@@ -25,10 +25,10 @@ margin-left: 9rem;
 }
 
 .navbar{
-    width: 5rem;
+    width: 4rem;
     height: 100%;
     position: fixed;
-    background: rgba(188, 178, 205, 0.23);
+    background: rgba(188, 178, 205, 0.214);
     display: flex;
     justify-content: center;
 }
@@ -38,36 +38,125 @@ margin-left: 9rem;
     flex-direction: column;
 }
 
-.navbar-item{
+.navbar-item, .navbar-contact{
     background-color: rgba(155, 146, 248, 0.14);
-    width: 50px;
-    height: 50px;   
+    width: 40px;
+    height: 40px;   
     border-radius: 50%;
     display: flex;
     justify-content: center;
     margin: 20px;
     transition:background-color 0.7s ease,width 0.4s ease, border-radius 0.8s ease; 
 }
-.navbar-item .nav-contact{
-    width: 100%;
-    background: rgba(155, 146, 248, 1);
-}
-.navbar-item.active {
-  width: 72%;
+
+.navbar-item.active, .navbar-contact {
+  width: 64%;
   border-radius:25px 0 25px 25px ;
   background: rgba(155, 146, 248, 1);
 }
+
 .navbar-item:hover {
     background: rgba(155, 146, 248, 1);
 }
+
 .nav-search, .nav-contact, .nav-plus{
     display: flex;
     align-items: center; 
 }
 
 main{
-  margin-top: 40px ;
+  margin-top: 20px ;
 }
 
+.input-container{
+position:absolute;
+left: -400px;
+background: rgb(155, 146, 248);
+width: 0px;
+height: 30px;
+border-radius: 0 15px 15px 0;
+transition:all 0.4s ease; 
+z-index: -1;
+}
+.input{
+    box-sizing: border-box;
+    height: 100%;
+    width: 97%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.input-container.active{
+    left: 62px;
+    width: 367px;
+    border-radius: 0 25px 25px 0;
+
+    }
+.input::placeholder {
+        color: rgba(255, 255, 255, 0.841);
+      }
+   
+      
 
 
+
+
+        .cards{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+      .flip-card {
+        width: 190px;
+        height: 254px;
+      }
+      
+      .title {
+        font-size: 1.5em;
+        font-weight: 900;
+      }
+      
+      .flip-card-inner {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card-front, .flip-card-back {
+        box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 1rem;
+      }
+      
+      .flip-card-front {
+        background: rgba(155, 146, 248, 0.3);
+        color: rgb(255, 255, 255);
+      }
+      
+      .flip-card-back {
+        font-size: 0.rem;
+        background: rgba(155, 146, 248, 0.3);
+        color: white;
+        transform: rotateY(180deg);
+      }
