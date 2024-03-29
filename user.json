@@ -1,0 +1,295 @@
+{
+    "results": [
+      {
+        "gender": "male",
+        "name": {
+          "title": "Mr",
+          "first": "Zouhayr",
+          "last": "Bahoumi"
+        },
+        "location": {
+          "street": {
+            "number": 123,
+            "name": "Rue Ibn Khaldoun"
+          },
+          "city": "Rabat",
+          "state": "Rabat-Salé-Kénitra",
+          "country": "Morocco",
+          "postcode": "10000",
+          "coordinates": {
+            "latitude": "34.0150",
+            "longitude": "-6.8324"
+          }
+        },
+        "email": "youssef.elamrani@example.com",
+        "phone": "(212) 678-9012",
+        "cell": "(212) 555-6789",
+        "picture": {
+          "large": "https://cdn.discordapp.com/avatars/1190338717508980949/ccdd9d9a1bbb0cdbc2bace6dd3c54571.webp?size=160"
+        },
+        "nat": "MA"
+      },
+      {
+        "gender": "female",
+        "name": {
+          "title": "Miss",
+          "first": "Najia",
+          "last": "Kenizi"
+        },
+        "location": {
+          "street": {
+            "number": 456,
+            "name": "Bejaad"
+          },
+          "city": "bejaad",
+          "state": "bejaad",
+          "country": "Morocco",
+          "postcode": "20000",
+          "coordinates": {
+            "latitude": "33.5951",
+            "longitude": "-7.6183"
+          }
+        },
+        "email": "najia.kenizim@example.com",
+        "phone": "(212) 987-6543",
+        "cell": "(212) 655-4321",
+        "picture": {
+          "large": "https://cdn.discordapp.com/avatars/1189970249190211725/f7a48bbc26322d6e314d0ed86a2a0d7a.webp?size=160"
+        },
+        "nat": "MA"
+      },
+      {
+        "gender": "male",
+        "name": {
+          "title": "Mr",
+          "first": "Mohamed",
+          "last": "bahloul"
+        },
+        "location": {
+          "street": {
+            "number": 789,
+            "name": "Rue Abdelkrim El Khattabi"
+          },
+          "city": "Marrakesh",
+          "state": "Marrakesh-Safi",
+          "country": "Morocco",
+          "postcode": "40000",
+          "coordinates": {
+            "latitude": "31.6295",
+            "longitude": "-7.9811"
+          }
+        },
+        "email": "mohammed.bouhali@example.com",
+        "phone": "(212) 123-4567",
+        "cell": "(212) 555-9876",
+        "picture": {
+          "large": "https://cdn.discordapp.com/avatars/953112443104686090/eac3c4e989150d24fd63b8c876c5bf79.webp?size=100"
+        },
+        "nat": "MA"
+      },
+      {
+        "gender": "female",
+        "name": {
+          "title": "Mrs",
+          "first": "Nadia",
+          "last": "Najib"
+        },
+        "location": {
+          "street": {
+            "number": 1011,
+            "name": "Avenue Hassan II"
+          },
+          "city": "Fes",
+          "state": "Fès-Meknès",
+          "country": "Morocco",
+          "postcode": "30000",
+          "coordinates": {
+            "latitude": "34.0372",
+            "longitude": "-5.0028"
+          }
+        },
+        "email": "NajibNadia@example.com",
+        "phone": "(212) 876-5432",
+        "cell": "(212) 555-8765",
+        "picture": {
+          "large": "https://cdn.discordapp.com/avatars/1191712369710219277/ac20b8cd3f5b7618d11d5cdec784ed55.webp?size=100"
+        },
+        "nat": "MA"
+      },
+      {
+        "gender": "male",
+        "name": {
+          "title": "Mr",
+          "first": "YOUSSEF",
+          "last": "allaoui"
+        },
+        "location": {
+          "street": {
+            "number": 1314,
+            "name": "Avenue Mohammed VI"
+          },
+          "city": "Tangier",
+          "state": "Tanger-Tetouan-Al Hoceima",
+          "country": "Morocco",
+          "postcode": "90000",
+          "coordinates": {
+            "latitude": "35.7595",
+            "longitude": "-5.8330"
+          }
+        },
+        "email": "ahmed.aitsalah@example.com",
+        "phone": "(212) 345-6789",
+        "cell": "(212) 555-3456",
+        "picture": {
+          "large": "https://cdn.discordapp.com/avatars/1189903253312389242/b0d6d28e807d9ac1ac79fbf790274514.webp?size=100"
+        },
+        "nat": "MA"
+      },
+      {
+        "gender": "male",
+        "name": {
+          "title": "mr",
+          "first": "Mouaad",
+          "last": "Lahmani"
+        },
+        "location": {
+          "street": {
+            "number": 1516,
+            "name": "Rue Ahmed Rami"
+          },
+          "city": "Agadir",
+          "state": "Souss-Massa",
+          "country": "Morocco",
+          "postcode": "80000",
+          "coordinates": {
+            "latitude": "30.4202",
+            "longitude": "-9.5981"
+          }
+        },
+        "email": "nadia.cherkaoui@example.com",
+        "phone": "(212) 654-3210",
+        "cell": "(212) 555-2345",
+        "picture": {
+          "large": "https://cdn.discordapp.com/avatars/1196369028181139511/46ac390c68cac10cbb21d62b5915c126.webp?size=100"
+        },
+        "nat": "MA"
+      },
+      {
+        "gender": "male",
+        "name": {
+          "title": "Mr",
+          "first": "Taoufik",
+          "last": "Boucetta"
+        },
+        "location": {
+          "street": {
+            "number": 1718,
+            "name": "Avenue Hassan II"
+          },
+          "city": "Meknes",
+          "state": "Fès-Meknès",
+          "country": "Morocco",
+          "postcode": "50000",
+          "coordinates": {
+            "latitude": "33.8854",
+            "longitude": "-5.5366"
+          }
+        },
+        "email": "omar.bouziane@example.com",
+        "phone": "(212) 567-8901",
+        "cell": "(212) 555-5678",
+        "picture": {
+          "large": "https://cdn.discordapp.com/avatars/1189932606775640108/73ddda6d63bba1214a8c8892e469511b.webp?size=100"
+        },
+        "nat": "MA"
+      },
+      {
+        "gender": "male",
+        "name": {
+          "title": "mr",
+          "first": "CHAGOURI",
+          "last": "HOUSSAM"
+        },
+        "location": {
+          "street": {
+            "number": 1920,
+            "name": "Rue Ibn Battuta"
+          },
+          "city": "Tetouan",
+          "state": "Tanger-Tetouan-Al Hoceima",
+          "country": "Morocco",
+          "postcode": "93000",
+          "coordinates": {
+            "latitude": "35.5731",
+            "longitude": "-5.3662"
+          }
+        },
+        "email": "zahra.elfassi@example.com",
+        "phone": "(212) 789-0123",
+        "cell": "(212) 555-7890",
+        "picture": {
+          "large": "https://cdn.discordapp.com/avatars/896051985277677590/0b3c7864c8c49586bd3dc6c3c85bfa30.webp?size=100"
+        },
+        "nat": "MA"
+      },
+      {
+        "gender": "male",
+        "name": {
+          "title": "Mr",
+          "first": "chihab",
+          "last": "abourkia"
+        },
+        "location": {
+          "street": {
+            "number": 2122,
+            "name": "Avenue Mohammed V"
+          },
+          "city": "Fez",
+          "state": "Fès-Meknès",
+          "country": "Morocco",
+          "postcode": "60000",
+          "coordinates": {
+            "latitude": "34.0369",
+            "longitude": "-5.0086"
+          }
+        },
+        "email": "karim.elmajdoubi@example.com",
+        "phone": "(212) 901-2345",
+        "cell": "(212) 555-9012",
+        "picture": {
+          "large": "https://cdn.discordapp.com/avatars/475450462733205507/d8459aac0c6a2dab1792839c036f1486.webp?size=160"
+        },
+        "nat": "MA"
+      },
+      {
+        "gender": "male",
+        "name": {
+          "title": "mr",
+          "first": "Hicham",
+          "last": "oualla"
+        },
+        "location": {
+          "street": {
+            "number": 2324,
+            "name": "Rue Ibn Sina"
+          },
+          "city": "Tanger",
+          "state": "Tanger-Tetouan-Al Hoceima",
+          "country": "Morocco",
+          "postcode": "91000",
+          "coordinates": {
+            "latitude": "35.7771",
+            "longitude": "-5.8038"
+          }
+        },
+        "email": "loubna.benjelloun@example.com",
+        "phone": "(212) 345-6789",
+        "cell": "(212) 555-2345",
+        "picture": {
+          "large": "https://cdn.discordapp.com/avatars/778959025173168158/e02c8bbbb4d18dc03d0372100fc7c2cd.webp?size=100"
+        },
+        "nat": "MA"
+      }
+    ]
+  }
+  

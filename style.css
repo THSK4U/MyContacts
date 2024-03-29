@@ -107,10 +107,11 @@ z-index: 6;
       
 
         .cards{
-            width: 100%;
+            width: 90%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
+            gap: 40px;
         }
 
       .flipcard {
@@ -125,13 +126,18 @@ z-index: 6;
       }
       .titleback{
         position: absolute;
-        top: 30%;
-        left: 25%;
-      }
+        top: 40%;
+    }
       .image{
-background-color: red;
-        width: 20px;
-height: 20px;
+        margin: 20px;
+        position: absolute;
+        top:0;
+        left: 50px;
+        width: 70px;
+        height: 70px;
+        border-radius: 30%;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
 
       .email{
@@ -158,12 +164,12 @@ height: 20px;
         justify-content: end;
         width: 100%;
         height: 100%;
-        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 1rem;
       }
       
       .flip-card-front {
+        font-size: 0.8rem;
         background: rgba(0, 0, 0, 0.3);
         background-repeat: no-repeat;
         background-size: cover;
@@ -172,7 +178,6 @@ height: 20px;
       }
       
       .flip-card-back {
-        font-size: 0.rem;
         background: rgba(155, 146, 248, 0.3);
         color: white;
         transform: rotateY(180deg);
