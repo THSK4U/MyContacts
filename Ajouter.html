@@ -32,13 +32,10 @@
 
     <main class="container">
         <div id="form">
-            <form class="popUp-form">
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="imageUpload" name="imageUpload">
-                            <label class="custom-file-label" for="imageUpload">Choose</label>
-                        </div>
+            <form action="/index.html" class="popUp-form">
+                <div class="form-group img">
+                    <div class="input-image">
+                        <input type="file" id="imgfile" class="imgfille" accept="image/*" />
                     </div>
                 </div>
 
@@ -68,7 +65,7 @@
                     <input type="text" class="form-control" id="Address" name="Address" autocomplete="organization-title" placeholder="Address" required>
                 </div>
         <div class="ajouter">
-        <button type="submit" class="btn">Ajouter</button>
+        <button type="submit" value="submit" class="btn" onclick="ajouter(event)">Ajouter</button>
 
         </div>
             </form>

@@ -1,3 +1,14 @@
+function ajouter(event){
+    event.preventDefault();
+
+    let nom = document.getElementById("Nom").value;
+    let prenom = document.getElementById("Prenom").value;
+
+    localStorage.setItem('nom', nom);
+    localStorage.setItem('prenom', prenom);
+   
+}
+
 const input = document.querySelector(".input-container");
 
 function activateItem(item) {
@@ -9,6 +20,19 @@ function activateItem(item) {
         input.classList.add('active');
     }
 }
+
+async function image(){
+    const inputimg = document.getElementById('imgfile');
+    const img = document.querySelector('.input-image');
+    
+    inputimg.addEventListener("change", inputimg => {
+            const imageURL = URL.createObjectURL(inputimg.target.files[0]);
+            img.style.backgroundImage = `url('${imageURL}')`;
+            localStorage.setItem('image', imageURL);
+
+    });
+    }
+    image()
 
 async function get() {
     const response = await fetch("user.json");
@@ -41,7 +65,7 @@ async function get() {
         accordionElement.innerHTML = `
         <div class="accordion-item">
         <h2 class="accordion-header">
-          <div style="background-image: url('${user.picture.large}')" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+          <div id="image" style="background-image: url('${user.picture.large}')" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
            <p class="nom"> ${user.name.first} ${user.name.last}</p>
           </div>
         </h2>
@@ -54,6 +78,7 @@ async function get() {
     `;
     cardsContainer.appendChild(flipcardElement);
     accordion.appendChild(accordionElement);
+    ajout()
     });
 }
 
@@ -65,20 +90,25 @@ function boucle(){
 
 boucle()
 
+function ajout(){
+    const image = document.getElementById('image');
+    document.querySelector(".nom").innerHTML=localStorage.getItem("nom") + " "+ localStorage.getItem("prenom");
+    image.style.backgroundImage=`url('${localStorage.getItem("image")}')`;
+}
+
 const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", function() {
     searchContacts(searchInput.value);
 });
 
-//lowercase
 
 function searchContacts(query) {
     const contacts = document.querySelectorAll('.flipcard, .accordion');
 
     contacts.forEach(contact => {
-        const name = contact.querySelector('.titlefront, .titleback, .nom').textContent;
+        const name = contact.querySelector('.titlefront, .titleback, .nom').textContent.toLocaleLowerCase();
         const phone = contact.querySelector('.phone').textContent;
-        const email = contact.querySelector('.email').textContent;
+        const email = contact.querySelector('.email').textContent.toLocaleLowerCase();
         
         if (name.includes(query) || phone.includes(query) || email.includes(query)) {
             contact.style.display = 'block';
@@ -87,3 +117,5 @@ function searchContacts(query) {
         }
     });
 }
+
+
