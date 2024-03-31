@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body::-webkit-scrollbar{
-    width: 0.05rem;
+    width: 0.3rem;
     height: 0.04rem;
 }
 body::-webkit-scrollbar-track{
@@ -108,8 +108,7 @@ align-items: center;
 .input::placeholder {
         color: rgba(255, 255, 255, 0.841);
       }
-   
-
+  
       .accordionlist{
         display: none;
       }
@@ -180,7 +179,6 @@ align-items: center;
       
       .flip-card-front {
         font-size: 0.8rem;
-        background: rgba(0, 0, 0, 0.3);
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -261,7 +259,6 @@ align-items: center;
       .accordion-button:not(.collapsed){
         color: white;
         background-color:rgba(155, 146, 248, 0.655);
-    
       }
       .accordion-item{
         background-color: rgba(155, 146, 248, 0.118);

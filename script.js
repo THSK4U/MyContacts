@@ -1,25 +1,18 @@
 const input = document.querySelector(".input-container");
 
 function activateItem(item) {
-        if (item.classList.contains('active')) {
-            item.classList.remove('active');
-            input.classList.remove('active');
-        } else {
-            item.classList.add('active');
-            input.classList.add('active');
-        }
+    if (item.classList.contains('active')) {
+        item.classList.remove('active');
+        input.classList.remove('active');
+    } else {
+        item.classList.add('active');
+        input.classList.add('active');
     }
-
-
-// fetch("https://randomuser.me/api/?page=3&results=10&seed=abc").then(function(response){
-//     console.log(response[0].gender)
-//     return response.json;
-// })
+}
 
 async function get() {
     const response = await fetch("user.json");
     const data = await response.json();
-        console.log(data)
 
     const cardsContainer = document.querySelector('.cards');
     const accordion = document.querySelector('.accordionlist');
@@ -47,12 +40,12 @@ async function get() {
 
         accordionElement.innerHTML = `
         <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingOne">
-          <div style="background-image: url('${user.picture.large}')" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-           <p> ${user.name.first} ${user.name.last}</p>
+        <h2 class="accordion-header">
+          <div style="background-image: url('${user.picture.large}')" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+           <p class="nom"> ${user.name.first} ${user.name.last}</p>
           </div>
         </h2>
-        <div  id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div  id="flush-collapseOne" class="collapse">
             <p class="description">${user.location.street.name}</p>
             <p class="email">${user.email}</p>
             <p class="phone">${user.phone}</p>
@@ -65,9 +58,32 @@ async function get() {
 }
 
 function boucle(){
-    for (i = 0 ;i<1;i++){
+    for (i = 0 ;i<5;i++){
          get();
     }
 }
 
 boucle()
+
+const searchInput = document.getElementById("searchInput");
+searchInput.addEventListener("input", function() {
+    searchContacts(searchInput.value);
+});
+
+//lowercase
+
+function searchContacts(query) {
+    const contacts = document.querySelectorAll('.flipcard, .accordion');
+
+    contacts.forEach(contact => {
+        const name = contact.querySelector('.titlefront, .titleback, .nom').textContent;
+        const phone = contact.querySelector('.phone').textContent;
+        const email = contact.querySelector('.email').textContent;
+        
+        if (name.includes(query) || phone.includes(query) || email.includes(query)) {
+            contact.style.display = 'block';
+        } else {
+            contact.style.display = 'none';
+        }
+    });
+}
