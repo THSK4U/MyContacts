@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: "Rubik", sans-serif;
+    box-sizing: border-box;
 }
 body::-webkit-scrollbar{
     width: 0.05rem;
@@ -24,9 +25,10 @@ body{
 
 main{
 margin-left: 9rem;
+margin-top: 80px ;
 }
 
-.navbar{
+.navb{
     width: 4rem;
     height: 100%;
     position: fixed;
@@ -35,19 +37,19 @@ margin-left: 9rem;
     justify-content: center;
 }
 
-.navbar-nav{
+.navbar-ul{
     display: flex;
     flex-direction: column;
 }
 
-.navbar-item, .navbar-contact{
+.navbar-item,.navbar-plus, .navbar-contact{
     background-color: rgba(155, 146, 248, 0.14);
     width: 40px;
     height: 40px;   
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin: 20px 30px 20px 4px;
     transition:background-color 0.7s ease,width 0.4s ease, border-radius 0.8s ease; 
 }
 
@@ -57,7 +59,7 @@ margin-left: 9rem;
   background: rgba(155, 146, 248, 1);
 }
 
-.navbar-item:hover {
+.navbar-item:hover,.navbar-plus:hover {
     background: rgba(155, 146, 248, 1);
 }
 
@@ -66,9 +68,10 @@ margin-left: 9rem;
     align-items: center; 
 }
 
-main{
-  margin-top: 100px ;
+.sizeimg{
+width: 25px;
 }
+
 
 .input-container{
 position:absolute;
@@ -80,6 +83,7 @@ height: 30px;
 border-radius: 0 15px 15px 0;
 transition:all 0.4s ease; 
 z-index: 6;
+font-size: 14px;
 }
 .input{
     box-sizing: border-box;
@@ -104,7 +108,10 @@ z-index: 6;
         color: rgba(255, 255, 255, 0.841);
       }
    
-      
+
+      .accordionlist{
+        display: none;
+      }
 
         .cards{
             width: 90%;
@@ -138,6 +145,7 @@ z-index: 6;
         border-radius: 30%;
         background-size: cover;
         background-repeat: no-repeat;
+        
       }
 
       .email{
@@ -166,15 +174,16 @@ z-index: 6;
         height: 100%;
         backface-visibility: hidden;
         border-radius: 1rem;
+        
       }
       
       .flip-card-front {
         font-size: 0.8rem;
         background: rgba(0, 0, 0, 0.3);
+        background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;
         color: rgb(255, 255, 255);
-        
       }
       
       .flip-card-back {
@@ -182,3 +191,61 @@ z-index: 6;
         color: white;
         transform: rotateY(180deg);
       }
+
+
+      @media screen and (max-width:832px) {
+        .navb{
+          background-color: transparent;
+          width: 100%;
+          z-index: 1;
+          pointer-events: none;
+        }
+        .input-container{
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 6vh;
+          border-radius: 0;
+          font-size: 20px;
+          }
+        main{
+          margin-left: 2rem;
+          margin-top: 80px ;
+          }
+        .cards{
+          display: none;
+        }
+        .navbar-item, .navbar-contact{
+          display: none;
+      }
+      .navbar-plus{
+        position:absolute;
+        bottom: 0;
+        right: 0;
+        background-color: blueviolet;
+        z-index: 1;
+        pointer-events:auto;
+      }
+      .accordionlist{
+        display: block;
+        z-index: -1;
+      }
+      .accordion{
+        width: 90%;
+        border-radius: 50px;
+      }
+      .accordion-button{
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-bottom-left-radius: 50px;
+        padding-left: 80px;
+        height: 70px;
+
+      }
+      .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed{
+        border-bottom-left-radius:50px;
+      }
+      .description{
+        padding-top: 10px;
+      }
+}

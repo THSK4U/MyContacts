@@ -1,0 +1,84 @@
+main{
+    margin-top: 100px ;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.right{
+    display: flex;
+    align-items: center;
+}
+.right img{
+    width: 300px;
+}
+.btn{
+    background-color: #9B92F8;
+    color: azure;
+    width: 150px;
+
+}
+.ajouter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.navbar-plus , .navbar-contact{
+    background-color: rgba(155, 146, 248, 0.14);
+    width: 40px;
+    height: 40px;   
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    transition:background-color 0.7s ease,width 0.4s ease, border-radius 0.8s ease; 
+}
+.navbar-contact:hover {
+    background: rgba(155, 146, 248, 1);
+}
+.navbar-plus{
+    width: 64%;
+    border-radius:25px 0 25px 25px ;
+    background: rgba(155, 146, 248, 1);
+}
+.nav-contact img{
+    width: 40px;
+}
+.form-control{
+    border: 1px #9B92F8 solid;
+    border-radius: 10px;
+}
+
+
+
+@media screen and (max-width:832px) {
+    .navb{
+        background-color: transparent;
+        width: 16%;
+        pointer-events: all;
+      }
+    .right img{
+        display: none;
+    }
+    .navbar-plus{
+        display: none;
+    }
+    .navbar-contact{
+        width: 100%;
+        border-radius:0 25px 25px ;
+        position: absolute;
+        right: -16px;
+        background: rgba(155, 146, 248, 1);
+    }
+    .arrow div{
+        position: relative;
+        width: 10px;
+        height: 10px;
+        border-top: 3px solid rgb(253, 253, 253);
+        border-left: 3px solid rgb(255, 255, 255);
+        transform: rotate(-45deg);
+        left: 8px;
+    }
+
+}

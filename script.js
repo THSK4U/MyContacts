@@ -17,14 +17,19 @@ function activateItem(item) {
 // })
 
 async function get() {
-    const response = await fetch("https://randomuser.me/api/");
+    const response = await fetch("user.json");
     const data = await response.json();
         console.log(data)
 
     const cardsContainer = document.querySelector('.cards');
+    const accordion = document.querySelector('.accordionlist');
+
     data.results.forEach(user => {
         const flipcardElement = document.createElement("div");
+        const accordionElement = document.createElement("div");
         flipcardElement.classList.add("flipcard");
+        accordionElement.classList.add("accordion");
+
         flipcardElement.innerHTML = `
             <div class="flip-card-inner">
                 <div class="flip-card-front"  style="background-image: url('${user.picture.large}')">
@@ -39,12 +44,28 @@ async function get() {
                 </div>
             </div>
         `;
-        cardsContainer.appendChild(flipcardElement);
+
+        accordionElement.innerHTML = `
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <div style="background-image: url('${user.picture.large}')" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+           <p> ${user.name.first} ${user.name.last}</p>
+          </div>
+        </h2>
+        <div  id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <p class="description">${user.location.street.name}</p>
+            <p class="email">${user.email}</p>
+            <p class="phone">${user.phone}</p>
+        </div>
+      </div>
+    `;
+    cardsContainer.appendChild(flipcardElement);
+    accordion.appendChild(accordionElement);
     });
 }
 
 function boucle(){
-    for (i = 0 ;i<50;i++){
+    for (i = 0 ;i<2;i++){
          get();
     }
 }

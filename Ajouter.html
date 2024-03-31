@@ -3,10 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ajouter</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" />
+    <link href="/ajouterstayle.css" rel="stylesheet" />
 </head>
-<body>
 
-      
+<body>
+    <nav class="nav">
+        <ul class="navbar-ul">
+
+        <li class="navbar-contact" onclick="activateItem(this)">
+            <a href="/index.html" class="nav-contact">
+                <div class="arrow"><div></div></div>
+                <img src="/Media/Contact.png" alt="Contact icone">
+                        </a>
+        </li>
+        
+        <li class="navbar-plus">
+            <a class="nav-plus" onclick="activateItem(this)">
+                <img src="/Media/Plus Math.png" alt="plusicone" class="sizeimg">
+            </a>
+        </li>
+        </ul>
+
+    </nav>
+
+
+    <main class="container">
+        <div id="form">
+            <form action="/" class="popUp-form">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="imageUpload" name="imageUpload">
+                            <label class="custom-file-label" for="imageUpload">Choose</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="Nom">Nom</label>
+                        <input type="text" class="form-control" id="Nom" name="Nom" placeholder="Nom" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="Prenom">Prenom</label>
+                        <input type="text" class="form-control" id="Prenom" name="Prenom" placeholder="Prenom" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" autocomplete="email" placeholder="Exemple@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+        
+                    <input type="tel" class="form-control" id="telephone" name="telephone" autocomplete="tel" placeholder="06XXXXXXXX" value="06" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="Address" name="Address" autocomplete="organization-title" placeholder="Address" required>
+                </div>
+        <div class="ajouter">
+        <button type="submit" class="btn">Ajouter</button>
+
+        </div>
+            </form>
+        </div>
+
+        <div class="right">
+            <img src="/Media/contact icon.png" alt="contact icone">
+        </div>
+    </main>
+
+    <script src="/script.js"></script>
 </body>
 </html>
