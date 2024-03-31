@@ -65,7 +65,7 @@ async function get() {
 }
 
 function boucle(){
-    for (i = 0 ;i<2;i++){
+    for (i = 0 ;i<1;i++){
          get();
     }
 }
